@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jornan的个人网站</title>
+  </head>
+  <body>
+    <!-- 顶部 -->
+    <div class="top">
+      <!-- logo -->
+      <div class="logo f3">
+        <img src="./src/pic/logo.png" alt="logo" />
+        <p>Jornan</p>
+      </div>
+      <!-- 导航 -->
+      <div class="f4 navigation">
+        <div class="active" id="navigation1" onclick="clickDiv(this)">首页</div>
+        <div id="navigation2" onclick="clickDiv(this)">作品</div>
+        <div id="navigation3" onclick="clickDiv(this)">爱好</div>
+        <div id="navigation4" onclick="clickDiv(this)">印象</div>
+        <div id="navigation5" onclick="clickDiv(this)">留言</div>
+      </div>
+      <!-- 搜索 -->
+      <div class="f3 search m8">
+        <input type="text" />
+        <button>搜索</button>
+      </div>
+    </div>
+    <!-- 中部 -->
+    <div class="middle">
+      <!-- 侧边栏 -->
+      <div class="sidebar">
+        <!-- 心情 -->
+        <div class="mood">
+          <img class="mood" src="./src/pic/mood.jpg" alt="" />
+        </div>
+        <!-- 关于我和给我留言 -->
+        <div class="about-message">
+          <div class="f1 about">
+            <img src="./src/pic/about.png" alt="" />
+            <p><b>关于我</b></p>
+          </div>
+          <div class="f1 message">
+            <img src="./src/pic/message.png" alt="" />
+            <p><b>给我留言</b></p>
+          </div>
+        </div>
+        <!-- 轮播图 -->
+        <div class="carousel">
+          <div class="carousel-images">
+            <img src="./src/pic/lunbo/lunbo1.jpg" alt="Image 1" />
+            <img src="./src/pic/lunbo/lunbo2.jpg" alt="Image 2" />
+            <img src="./src/pic/lunbo/lunbo3.jpg" alt="Image 3" />
+            <img src="./src/pic/lunbo/lunbo4.jpg" alt="Image 4" />
+          </div>
+        </div>
+        <!-- 新闻 -->
+        <div class="news">
+          <!-- 边条 -->
+          <div class="newsedge"></div>
+          <!-- 新闻标题 -->
+          <div class="newstitle">
+            <div class="title">最近更新</div>
+            <div class="more">更多</div>
+          </div>
+          <!-- 列表  -->
+          <div class="newslist">
+            <div><p>· xx年xx月xx日，试玩“塞尔达传说：智慧的再现”</p></div>
+            <div><p>· xx年xx月xx日，试玩“塞尔达传说：王国之泪”</p></div>
+            <div><p>· xx年xx月xx日，试玩“塞尔达传说：荒野之息”</p></div>
+          </div>
+        </div>
+        <!-- 关注 -->
+        <div class="follow">
+          <!-- 边条 -->
+          <div class="followedge"></div>
+          <!-- 标题 -->
+          <div class="followtitle">关注我</div>
+          <!-- 二维码 -->
+          <div class="followitem">
+            <!-- 二维码 -->
+            <div class="followitem-qrcode">
+              <img src="./src/pic/weixin.jpg" alt="" />
+              <p>扫一扫加我微信~</p>
+            </div>
+            <!-- 分割线 -->
+            <div class="separator"></div>
+            <!--  联系方式 -->
+            <div class="connection">
+              <div>
+                <img src="./src/pic/qq.png" alt="QQ" /> 我的QQ：xxxxxxxxx
+              </div>
+              <div>
+                <img src="./src/pic/tel.png" alt="tel" /> 我的电话：xxxxxxxxxxx
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 内容 -->
+      <div class="imformation f1">
+        <div>个人信息</div>
+        <div>个人简介</div>
+        <div>个人相册</div>
+        <div>个人日记</div>
+        <div>个人留言</div>
+      </div>
+    </div>
+    <!-- 底部 -->
+    <div class="bottom">
+      <a href="https://beian.mps.gov.cn/#/">备案号：XXXXXX</a>
+      <p>Copyright@2025.All rights reserved.</p>
+    </div>
+  </body>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      background-image: url("./src/pic/background.jpg");
+      background-size: cover;
+      /* background-repeat: no-repeat; */
+      background-position: center bottom;
+      /* filter: blur(1px); */
+      filter: brightness(0.7);
+      /* mix-blend-mode: darken; */
+      /* mix-blend-mode: multiply; */
+    }
+    div {
+      margin: 0;
+      width: 100%;
+      /* background-color: gray; */
+      /* border: 1px solid black; */
+      display: flex;
+    }
+    .top {
+      height: 100px;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.5);
+      float: inline-start;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      padding-left: 8px;
+    }
+    .logo img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 5px;
+    }
+    .navigation {
+      height: 100%;
+      display: flex;
+      justify-content: left;
+      align-items: center;
+    }
+    .navigation div {
+      height: 100%;
+      margin: 0px;
+      padding: 0px 8px;
+      cursor: pointer;
+      /* font-size: 15px; */
+      align-items: center;
+      justify-content: center;
+    }
+    .navigation div:hover {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+    .navigation div:active {
+      background-color: rgba(0, 0, 0, 0.2);
+      border-bottom: 1px solid black;
+    }
+    .navigation div.active {
+      background-color: rgba(0, 0, 0, 0.2);
+      border-bottom: 1px solid black;
+    }
+    .search input {
+      /* width: 200px; */
+      height: 23px;
+      /* border-radius: 15px; */
+      border: none;
+      padding: 0px 8px;
+    }
+    .search button {
+      width: 40px;
+      height: 23px;
+      font-size: 12px;
+      /* border-radius: 15px; */
+      border: 1px solid black;
+      background-color: jade;
+      cursor: pointer;
+    }
+    .middle {
+      height: 1184px;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding-left: 5%;
+      padding-right: 5%;
+      padding-top: 10px;
+      overflow: auto;
+    }
+    .sidebar {
+      width: 170px;
+      flex-direction: column;
+      align-self: start;
+      margin: 0px;
+      color: rgba(0, 0, 0, 0.5);
+      font-size: 12px;
+      margin-right: 10px;
+    }
+    .sidebar div {
+      height: 100px;
+      margin-bottom: 10px;
+    }
+    .mood img {
+      height: 100%;
+      overflow: hidden;
+    }
+    .about-message div {
+      flex-direction: column;
+      justify-content: end;
+      align-items: center;
+      color: white;
+      font-size: 10px;
+    }
+    .about {
+      background-color: goldenrod !important;
+      margin-right: 5px;
+    }
+    .about-message img {
+      width: 40px;
+      height: 40px;
+    }
+    .about-message p {
+      margin-top: 5px;
+      padding-bottom: 10px;
+    }
+    .message {
+      background-color: lightcoral !important;
+    }
+    .carousel {
+      height: 240px !important;
+      width: 170px;
+      position: relative;
+      overflow: hidden;
+    }
+    .carousel-images {
+      width: 100%;
+      height: 100% !important;
+      animation: slide 10s infinite;
+    }
+    .carousel-images img {
+      width: 100%;
+      flex-shrink: 0;
+    }
+    @keyframes slide {
+      0% {
+        transform: translateX(0);
+      }
+      25% {
+        transform: translateX(-170px);
+      }
+      50% {
+        transform: translateX(-340px);
+      }
+      75% {
+        transform: translateX(-510px);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+    .news {
+      height: 130px !important;
+      flex-direction: column;
+      background-color: white;
+    }
+    .news div {
+      margin-bottom: 0;
+    }
+    .newsedge {
+      width: 100%;
+      background-color: greenyellow;
+      flex: 5;
+    }
+    .newstitle {
+      flex: 25;
+    }
+    .newstitle .title {
+      height: 25px;
+      align-items: center;
+      background-color: lightgray;
+      color: green;
+      font-size: 14px;
+      padding-left: 10px;
+      font-weight: 700;
+    }
+    .newstitle .more {
+      height: 25px;
+      align-items: center;
+      justify-content: end;
+      background-color: lightgray;
+      font-size: 12px;
+      padding-right: 10px;
+      cursor: pointer;
+    }
+    .newstitle div {
+      height: 25px;
+      align-items: center;
+      background-color: lightgray;
+    }
+    .newslist {
+      width: 100%;
+      background-color: lightgray;
+      flex: 100;
+      flex-direction: column;
+    }
+    .newslist div {
+      height: 33px;
+      padding-left: 5px;
+      align-items: center;
+    }
+    .newslist div p {
+      margin: 0;
+      cursor: pointer;
+    }
+    .follow {
+      height: 250px !important;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+      margin: 0px;
+      color: rgba(0, 0, 0, 0.5);
+      font-size: 12px;
+    }
+    .follow .followedge {
+      width: 100%;
+      background-color: purple;
+      flex: 5;
+      margin-bottom: 0;
+    }
+    .follow .followtitle {
+      height: 25px !important;
+      align-items: center;
+      justify-content: center;
+      background-color: lightgray;
+      color: purple;
+      font-size: 15px;
+      font-weight: 700;
+      flex: 25;
+      margin-bottom: 0;
+      padding-top: 5px;
+    }
+    .follow .followitem {
+      flex-direction: column;
+      align-items: center;
+      justify-content: end;
+      background-color: lightgray;
+      font-size: 12px;
+      cursor: pointer;
+      flex: 225;
+      margin-bottom: 0;
+    }
+    .followitem-qrcode {
+      height: 150px !important;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 5px;
+      margin-bottom: 0 !important;
+    }
+    .followitem-qrcode img {
+      width: 100px;
+      height: 100px;
+      /* border: 1px solid gray; */
+    }
+    .separator {
+      width: 80%;
+      border-top: 1px dashed grey;
+    }
+    .connection {
+      width: 75%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .connection div {
+      height: 25px !important;
+      margin-bottom: 0 !important;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      font-size: 10px;
+    }
+    .connection img {
+      width: 20px;
+      height: 20px;
+    }
+    .imformation {
+      flex: 3;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.5);
+      margin: 0px;
+      color: rgba(0, 0, 0, 0.5);
+      font-size: 12px;
+    }
+    .bottom {
+      height: 80px;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: rgba(255, 255, 255, 0.5);
+      margin: 0px;
+      color: rgba(0, 0, 0, 0.5);
+      font-size: 12px;
+    }
+    .bottom p {
+      margin: 0px;
+    }
+    .m8 {
+      margin: 8px;
+    }
+    .f3 {
+      flex: 3;
+    }
+    .f4 {
+      flex: 4;
+    }
+  </style>
+  <script>
+    function clickDiv(e) {
+      let divs = document.getElementsByClassName("navigation")[0].children;
+      for (let i = 0; i < divs.length; i++) {
+        divs[i].classList.remove("active");
+      }
+      e.classList.add("active");
+    }
+  </script>
+</html>
